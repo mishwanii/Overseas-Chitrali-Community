@@ -2,16 +2,16 @@ workflows:
   ios_build:
     name: iOS Build
     max_build_duration: 60
+    environment:
+      flutter:
+        version: latest
+        channel: stable
+      xcode: latest
+      cocoapods: default
     triggers:
       - push
       - pull_request
       - tag
-    environment:
-      flutter:
-        channel: stable
-        version: latest
-      xcode: latest
-      cocoapods: default
     scripts:
       - name: Build iOS App
         script: flutter build ios --release --flavor ios-production -t lib/main_prod.dart
