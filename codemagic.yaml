@@ -5,12 +5,8 @@ workflows:
     environment:
       flutter:
         version: "latest"  # Should be a string type
-        channel: "stable"  # Should be a string type
       xcode: "latest"  # Ensure it's a string type, like "latest" or a version number (e.g., "14.4")
       cocoapods: "default"  # Ensure it's a string type
-    triggers:
-      - push
-      - pull_request
     scripts:
       - name: Build iOS App
         script: flutter build ios --release --flavor ios-production -t lib/main_prod.dart
