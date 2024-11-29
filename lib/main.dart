@@ -14,7 +14,16 @@ class MyApp extends StatelessWidget {
       title: 'Overseas Chitrali',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        fontFamily: 'Montserrat', // Set Montserrat as the default font
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        textTheme: const TextTheme(
+          bodyLarge: TextStyle(fontSize: 18), // Larger body text
+          bodyMedium: TextStyle(fontSize: 16), // Medium body text
+          titleLarge: TextStyle(
+            fontSize: 22,
+            fontWeight: FontWeight.bold,
+          ), // Large title text
+        ),
         useMaterial3: true,
       ),
       home: const HomePage(),

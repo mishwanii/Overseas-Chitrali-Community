@@ -44,7 +44,7 @@ class _HomePageState extends State<HomePage> {
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..clearCache()
       ..loadRequest(
-        Uri.parse('https://dashboard.overseaschitraliksa.com/'),
+        Uri.parse('https://dashboard.overseaschitraliksa.org/dashboard'),
       );
   }
 
@@ -78,7 +78,7 @@ class _HomePageState extends State<HomePage> {
                           child: CircularProgressIndicator(),
                         ),
                         Text(
-                          'Please wait',
+                          'Loading... Please wait!',
                           style: TextStyle(
                               fontSize: 24, fontWeight: FontWeight.w600),
                         )
