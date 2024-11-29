@@ -4,11 +4,11 @@ workflows:
     max_build_duration: 60
     environment:
       flutter:
-        version: "stable"  # Use "stable" for the latest stable version or specify a specific version
-      xcode: "latest"  # Use the version that matches your project needs
+        version: "stable"
+      xcode: "latest"
       cocoapods: "default"
     scripts:
       - name: Build iOS App
-        script: flutter build ios --release -t lib/main.dart  # Removed --flavor option
+        script: flutter build ios --release -t lib/main.dart
     artifacts:
       - build/ios/iphoneos/*.ipa
