@@ -4,11 +4,11 @@ workflows:
     max_build_duration: 60
     environment:
       flutter:
-        version: "latest"  # Should be a string type
-      xcode: "latest"  # Ensure it's a string type, like "latest" or a version number (e.g., "14.4")
-      cocoapods: "default"  # Ensure it's a string type
+        version: "stable"  # Use "stable" for the latest stable version or specify a specific version
+      xcode: "latest"  # Use the version that matches your project needs
+      cocoapods: "default"
     scripts:
       - name: Build iOS App
         script: flutter build ios --release --flavor ios-production -t lib/main_prod.dart
     artifacts:
-      - build/ios/iphoneos/*.ipa  # Specify the correct path to your generated .ipa file
+      - build/ios/iphoneos/*.ipa
