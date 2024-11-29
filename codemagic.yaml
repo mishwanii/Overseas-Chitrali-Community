@@ -4,16 +4,15 @@ workflows:
     max_build_duration: 60
     environment:
       flutter:
-        version: "latest"  # Use a string type for version, e.g., "latest" or "3.7.12"
-        channel: "stable"  # Make sure the channel is also a string
-      xcode: "latest"  # Use "latest" for the most recent version or specify a version number
-      cocoapods: "default"  # Ensure it's specified as a string
+        version: "latest"  # Should be a string type
+        channel: "stable"  # Should be a string type
+      xcode: "latest"  # Ensure it's a string type, like "latest" or a version number (e.g., "14.4")
+      cocoapods: "default"  # Ensure it's a string type
     triggers:
       - push
       - pull_request
-      - tag  # Add tag if needed, otherwise omit it
     scripts:
       - name: Build iOS App
         script: flutter build ios --release --flavor ios-production -t lib/main_prod.dart
     artifacts:
-      - build/ios/iphoneos/*.ipa  # Path to the generated .ipa file
+      - build/ios/iphoneos/*.ipa  # Specify the correct path to your generated .ipa file
