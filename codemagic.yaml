@@ -9,6 +9,6 @@ workflows:
       cocoapods: "default"
     scripts:
       - name: Build iOS App
-        script: flutter build ios --release --flavor ios-production -t lib/main.dart
+        script: flutter build ios --release -t lib/main.dart  # Removed --flavor option
     artifacts:
       - build/ios/iphoneos/*.ipa
